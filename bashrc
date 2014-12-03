@@ -119,7 +119,7 @@ fi
 # Terminal prompt settings
 # Old Settings
 # \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
-export PS1='\e[0;31m\u@\h [\@]: \w\a $\e[m\e[0;32m '
+export PS1='\e[0;31m\u@\h [\@]: \e[0;36m\w\a\e[m \e[0;31m\$\e[m\e[0;32m '
 
 # mkcd
 function mkcd
