@@ -6,6 +6,8 @@ alias tube='youtube-dl -o "%(title)s.%(ext)s"'
 
 alias csk='cd $HOME/src/kde/src && cd'
 alias cbk='cd $HOME/src/kde/build && cd'
+alias dn='cd $HOME/downloads'
+alias cdchef='cd $HOME/codes/practice/codechef'
 
 alias rm='rm -vi'
 alias mv='mv -vi'
