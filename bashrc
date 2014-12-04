@@ -119,7 +119,7 @@ fi
 # Terminal prompt settings
 # Old Settings
 # \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
-export PS1='\e[0;91m\u@\h \e[0;93m[\@]:\e[m \e[0;96m\w\a\e[m \e[0;31m\$\e[m\e[0;92m '
+export PS1='\[\e[0;91m\u@\h \e[0;93m[\@]:\e[m \e[0;96m\w\a\e[m \e[0;31m\$\e[m\e[0;92m\] '
 
 # mkcd
 function mkcd
@@ -140,3 +140,8 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 			man "$@"
 }
+
+# export paths for gmock
+export GMOCK_DIR=$HOME/src/gmock-1.7.0
+export GTEST_DIR=$HOME/src/gmock-1.7.0/gtest
+export GOOGLEMOCK_SOURCES=$GMOCK_DIR/src
