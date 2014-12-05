@@ -85,7 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alhF'
@@ -119,7 +119,7 @@ fi
 # Terminal prompt settings
 # Old Settings
 # \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
-export PS1='\[\e[0;91m\u@\h \e[0;93m[\@]:\e[m \e[0;96m\w\a\e[m \e[0;31m\$\e[m\e[0;92m\] '
+export PS1='\[\e[0;91m\]\u@\h\[\e[m\] \[\e[0;93m\][\@]:\[\e[m\] \[\e[0;96m\]\w\[\e[m\] \[\e[0;91m\]\$\[\e[m\]\[\e[0;92m\] '
 
 # mkcd
 function mkcd
