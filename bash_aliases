@@ -1,6 +1,8 @@
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias upgr='sudo apt-get update && sudo apt-get upgrade'
+alias srch='sudo apt-cache search'
+alias inst='sudo apt-get install'
 
 alias tube='youtube-dl -o "%(title)s.%(ext)s"'
 
