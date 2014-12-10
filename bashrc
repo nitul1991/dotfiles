@@ -181,3 +181,6 @@ man() {
 export GMOCK_DIR=$HOME/src/gmock-1.7.0
 export GTEST_DIR=$HOME/src/gmock-1.7.0/gtest
 export GOOGLEMOCK_SOURCES=$GMOCK_DIR/src
+
+# Automatically prepend 'cd' when entering just a path in the shell
+shopt -s  autocd
