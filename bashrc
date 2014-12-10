@@ -121,11 +121,47 @@ fi
 # \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
 export PS1='\[\e[0;91m\]\u@\h\[\e[m\] \[\e[0;93m\][\@]:\[\e[m\] \[\e[0;96m\]\w\[\e[m\] \[\e[0;91m\]\$\[\e[m\]\[\e[0;92m\] '
 
+# Special Functions
+###############################################################################
+
 # mkcd
 function mkcd
 {
-  dir="$*";
-  mkdir -p "$dir" && cd "$dir";
+    dir="$*";
+    mkdir -p "$dir" && cd "$dir";
+}
+
+#netinfo
+function netinfo()
+{
+    echo "--------------- Network Information ---------------"
+    /sbin/ifconfig | awk /'inet addr/ {print $2}'
+    echo""
+    /sbin/ifconfig | awk /'Bcast/ {print $3}'
+    echo""
+    /sbin/ifconfig | awk /'inet addr/ {print $4}'
+    echo""
+    /sbin/ifconfig | awk /'HWaddr/ {print $4,$5}'
+    echo "---------------------------------------------------"
+}
+
+#myinfo
+function myinfo ()
+{
+    printf "CPU: "
+    cat /proc/cpuinfo | grep "model name" | head -1 | awk '{ for (i = 4; i <= NF; i++) printf "%s ", $i }'
+    printf "\n"
+
+    cat /etc/issue | awk '{ printf "OS: %s %s | " , $1 , $2 }'
+    uname -a | awk '{ printf "Kernel: %s " , $3 }'
+    uname -m | awk '{ printf "%s | " , $1 }'
+    kded4 --version | grep "KDE Development Platform" | awk '{ printf "KDE: %s", $4 }'
+    printf "\n"
+    uptime | awk '{ printf "Uptime: %s %s %s", $3, $4, $5 }' | sed 's/,//g'
+    printf "\n"
+    cputemp | head -1 | awk '{ printf "%s %s %s\n", $1, $2, $3 }'
+    cputemp | tail -1 | awk '{ printf "%s %s %s\n", $1, $2, $3 }'
+    #cputemp | awk '{ printf "%s %s", $1 $2 }'
 }
 
 # coloured man pages using less

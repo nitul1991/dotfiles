@@ -31,3 +31,5 @@ alias ..='cd ..'
 alias sl='ls'
 
 alias lsl='ls -lhFA | less'
+
+alias cputemp='sensors | grep Core'
