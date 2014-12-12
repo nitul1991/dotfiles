@@ -56,3 +56,6 @@ let g:airline_right_sep = '|'
 let g:airline_symbols.branch = '⎇'
 " enable syntastic integration
 let g:airline#extensions#syntastic#enabled = 1
+
+" Replace grep with ack in vim
+set grepprg=ack
