@@ -34,3 +34,9 @@ alias sl='ls'
 alias lsl='ls -lhFA | less'
 
 alias cputemp='sensors | grep Core'
+
+alias vimrc='vi $HOME/.vimrc'
+alias vrc='. $HOME/.vimrc'
+
+alias bashrc='vi $HOME/.bashrc'
+alias brc='. $HOME/.bashrc'

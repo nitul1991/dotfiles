@@ -59,3 +59,20 @@ let g:airline#extensions#syntastic#enabled = 1
 
 " Replace grep with ack in vim
 set grepprg=ack
+
+" Configure Syntastic
+"******************************************************************************
+
+" Automatically load errors into the location list
+let g:syntastic_always_populate_loc_list = 1
+
+" Check for errors when a file is loaded into vim
+let g:syntastic_check_on_open = 1
+
+" Define symbols to indicate warnings and errors
+let g:syntastic_error_symbol = "x"
+let g:syntastic_warning_symbol = "!"
+
+" Set cpp compiler options
+let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall -Wextra -Wpedantic"
