@@ -40,3 +40,7 @@ alias vrc='. $HOME/.vimrc'
 
 alias bashrc='vi $HOME/.bashrc'
 alias brc='. $HOME/.bashrc'
+
+alias aliases='vi $HOME/.bash_aliases'
+
+alias trim='sudo fstrim -v /'
