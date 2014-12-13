@@ -119,7 +119,7 @@ fi
 # Terminal prompt settings
 # Old Settings
 # \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
-export PS1='\[\e[0;91m\]\u@\h\[\e[m\] \[\e[0;93m\][\@]:\[\e[m\] \[\e[0;96m\]\w\[\e[m\] \[\e[0;91m\]\$\[\e[m\]\[\e[0;92m\] '
+export PS1='\[\e[0;91m\]\u@\h\[\e[m\] \[\e[0;93m\][\@]:\[\e[m\] \[\e[0;96m\]\w\[\e[m\] \[\e[0;91m\]\n\$\[\e[m\]\[\e[0;92m\] '
 
 # Special Functions
 ###############################################################################
