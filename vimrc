@@ -1,6 +1,17 @@
 " show line numbers
 set number
 
+" show relative line numbers
+set relativenumber
+
+" automatically switch to absolute line numbers when vim loses focus
+":au FocusLost * :set number
+":au FocusGained * :set relativenumber
+
+" use relaitve line numbers only in normal mode
+"autocmd InsertEnter * :set number
+"autocmd InsertLeave * :set relativenumber
+
 " show command in bottom bar 
 set showcmd
 
