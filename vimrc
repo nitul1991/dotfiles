@@ -68,19 +68,24 @@ let g:airline_symbols.branch = '⎇'
 " enable syntastic integration
 let g:airline#extensions#syntastic#enabled = 1
 
-" Replace grep with ack in vim
+" replace grep with ack in vim
 set grepprg=ack
+
+" set colorscheme for gvim
+if has('gui_running')
+    colorscheme desert
+endif
 
 " Configure Syntastic
 "******************************************************************************
 
-" Automatically load errors into the location list
+" automatically load errors into the location list
 let g:syntastic_always_populate_loc_list = 1
 
-" Check for errors when a file is loaded into vim
+" check for errors when a file is loaded into vim
 let g:syntastic_check_on_open = 1
 
-" Define symbols to indicate warnings and errors
+" define symbols to indicate warnings and errors
 let g:syntastic_error_symbol = "x"
 let g:syntastic_warning_symbol = "!"
 
