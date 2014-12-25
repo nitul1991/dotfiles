@@ -121,6 +121,9 @@ fi
 # \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$
 export PS1='\[\e[0;91m\]\u@\h\[\e[m\] \[\e[0;93m\][\@]:\[\e[m\] \[\e[0;96m\]\w\[\e[m\] \[\e[0;91m\]\n\$\[\e[m\]\[\e[0;92m\] '
 
+# PROMPT_COMMAND
+export PROMPT_COMMAND='echo -----------------------------------------------------------------------------------------------------------------------------------------------------'
+
 # Special Functions
 ###############################################################################
 
@@ -148,6 +151,7 @@ function netinfo()
 #myinfo
 function myinfo ()
 {
+    echo "-------------------------------------------------------------------"
     printf "CPU: "
     cat /proc/cpuinfo | grep "model name" | head -1 | awk '{ for (i = 4; i <= NF; i++) printf "%s ", $i }'
     printf "\n"
@@ -162,6 +166,7 @@ function myinfo ()
     cputemp | head -1 | awk '{ printf "%s %s %s\n", $1, $2, $3 }'
     cputemp | tail -1 | awk '{ printf "%s %s %s\n", $1, $2, $3 }'
     #cputemp | awk '{ printf "%s %s", $1 $2 }'
+    echo "-------------------------------------------------------------------"
 }
 
 # coloured man pages using less
