@@ -31,7 +31,7 @@ alias ..='cd ..'
 
 alias sl='ls'
 
-alias lsl='ls -lhFA | less'
+alias lsl='ls -lhFA --color | less -R'
 
 alias cputemp='sensors | grep Core'
 
@@ -44,3 +44,12 @@ alias brc='. $HOME/.bashrc'
 alias aliases='vi $HOME/.bash_aliases'
 
 alias trim='sudo fstrim -v /'
+
+alias graphics='sudo vim /sys/kernel/debug/vgaswitcheroo/switch'
+
+alias tp='$HOME/codes/scripts/touch_toggle.sh'
+
+alias grepc='grep --color=always'
+alias lesc='less -R'
+
+alias search='find . -name'
