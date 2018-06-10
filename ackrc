@@ -1,0 +1,18 @@
+
+
+# Sort search results(by file)
+--sort-files
+
+# Always color, even if piping to another program
+--color
+
+# Use "less -r" as the pager
+--pager=less -r
+
+# Directories to ignore whilst searching
+# --ignore-dir=<directory_name>
+
+# Files to ignore whilst searching
+# --ignore-file=match:<file_name>
+# Regex matches are also supported
+# --ignore-file=match:/<regex>/
