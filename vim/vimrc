@@ -1,65 +1,123 @@
-" show line numbers
+
+
+" Enable line numbering
 set number
-
-" show relative line numbers
+" Enable relative line numbering
+if exists('+relativenumber')
 set relativenumber
+endif
 
-" automatically switch to absolute line numbers when vim loses focus
-":au FocusLost * :set number
-":au FocusGained * :set relativenumber
+" Toggle line numbers
+if exists('+relativenumber')
+nnoremap <F2> :setlocal number! <bar> setlocal relativenumber!<CR>
+else
+nnoremap <F2> :setlocal number!<CR>
+endif
 
-" use relaitve line numbers only in normal mode
-"autocmd InsertEnter * :set number
-"autocmd InsertLeave * :set relativenumber
-
-" show command in bottom bar 
-set showcmd
-
-" highlight current line
-set cursorline
-
-" load filetype-specific indent files
-filetype indent on
-
-" highlight matching [{()}]
-set showmatch
-
-" enable syntax processing
-syntax enable
-
-" number of visual spaces per TAB
+" tab character = 4 spaces
 set tabstop=4
+set shiftwidth=4
 
-" number of spaces in TAB when editing
-set softtabstop=4
-
-" tabs are spaces
+" Enable the conversion of tabs to spaces
 set expandtab
 
-" ****Searching****
+" Enable C-style indentation
+set cindent
 
-" search as characters are  entered
+" Highlight search results
+set hlsearch
 set incsearch
 
-" highlight matches
-set hlsearch
+" Enable case-insensitive search
+set smartcase
+" set ignorecase
 
-" turn of search highlight
-nnoremap <leader><space> :nohlsearch<CR>
-
+" Enable syntax highlighting
 syntax on
-filetype plugin indent on
 
-" make the statusline appear all the time (for airline)
-set laststatus=2
+" Remap the arrow keys
+nnoremap <up>    <nop>
+nnoremap <down>  <nop>
+nnoremap <right> <nop>
+nnoremap <left>  <nop>
 
-" enable 256 colors in vim
+inoremap <up>    <nop>
+inoremap <up>    <nop>
+inoremap <down>  <nop>
+inoremap <right> <nop>
+
+vnoremap <left>  <nop>
+vnoremap <down>  <nop>
+vnoremap <right> <nop>
+vnoremap <left>  <nop>
+
+set list
+set listchars=tab:>-,trail:.,nbsp:%,extends:>,precedes:<
+
+" Enable 256 colour support
 set t_Co=256
 
-" replace grep with ack in vim
-set grepprg=ack
+" Remove leading spaces
+command! Rls execute '%s/^\s\+//e'
+" Remove trailing spaces
+command! Rts execute '%s/\s\+$//e'
 
-" set colorscheme for gvim
-if has('gui_running')
-    colorscheme desert
-endif
+set cursorline
+hi CursorLine cterm=none ctermbg=235 ctermfg=none
+
+set cursorcolumn
+hi CursorColumn cterm=none ctermbg=235 ctermfg=none
+
+hi LineNr cterm=none ctermbg=none ctermfg=cyan
+
+" StatusLine
+" Enable a permanent statusline
+set laststatus=2
+" Print complete filepath
+set statusline=%{expand('%:p')}
+" Add file modification status flag
+set statusline+=\ %m
+" Swtich to the right side
+set statusline+=%=
+" Print line number and column number
+set statusline+=[line\ :\ %-4l\ col\ :\ %-3c]
+hi StatusLine cterm=none ctermbg=236 ctermfg=cyan
+
+" TabLine
+hi TabLineFill ctermfg=none  ctermbg=236  cterm=none
+hi TabLine     ctermfg=cyan  ctermbg=236  cterm=none
+hi TabLineSel  ctermfg=black ctermbg=cyan cterm=none
+
+" SearchResult
+hi Search ctermfg=black ctermbg=cyan cterm=none
+
+" Verticl split separator
+hi VertSplit cterm=none ctermbg=236 ctermfg=cyan
+
+" Popup menu
+hi PMenu    ctermfg=cyan  ctermbg=235  cterm=none
+hi PMenuSel ctermfg=black ctermbg=cyan cterm=none
+
+" Cursor
+" hi Cursor ctermfg=black ctermbg=cyan cterm=none
+
+" Map F9 and F10 to switch tabs
+nnoremap <F9> gT
+nnoremap <F10> gt
+
+" Netrw settings
+" Tree style listing
+let g:netrw_liststyle=3
+" No banner
+let g:netrw_banner=0
+
+" Source .vimrc if present in the working directpry
+set exrc
+" Restrict the usage of some commands in non-default .vimrc files
+set secure
+
+" Remap the ESC key
+" nnoremap jk <ESC>
+
+" Toggle between buffers
+nnoremap <F5> :buffers<CR>:buffer<Space>
