@@ -1,0 +1,40 @@
+
+
+set bell-style none
+set blink-matching-paren on
+set completion-ignore-case on
+set completion-map-case on
+set completion-query-items 20
+set enable-bracketed-paste on
+set expand-tilde on
+
+set editing-mode vi
+set show-mode-in-prompt on
+
+# Pipe shaped cursor in insert mode
+set vi-ins-mode-string \1\e[6 q\2
+
+# Block shaped cursor in command mode
+set vi-cmd-mode-string \1\e[2 q\2
+
+# Colour files by type
+set colored-stats on
+
+# Append char to indicate type
+set visible-stats on
+
+# Mark symlinked directories
+set mark-symlinked-directories on
+
+# Mark modified lines in the history
+set mark-modified-lines on
+
+# Colour the common prefix
+set colored-completion-prefix on
+
+# Color the common prefix in menu-complete
+set menu-complete-display-prefix on
+
+# Use Control-l to clear the screen in vi-insert mode
+set keymap vi-insert
+Control-l: clear-screen
