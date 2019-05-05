@@ -38,3 +38,5 @@ set menu-complete-display-prefix on
 # Use Control-l to clear the screen in vi-insert mode
 set keymap vi-insert
 Control-l: clear-screen
+Control-n: next-history
+Control-p: previous-history
