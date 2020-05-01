@@ -15,3 +15,5 @@ do
     source ${script}
 #fi
 done
+
+export LC_ALL=en_US.UTF-8
