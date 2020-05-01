@@ -53,3 +53,6 @@ alias grepc='grep --color=always'
 alias lesc='less -R'
 
 alias search='find . -name'
+
+# Git aliases
+alias glog1='git log --oneline'
