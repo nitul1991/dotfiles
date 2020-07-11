@@ -1,18 +1,30 @@
 
 
-[username]
-show_always = true
-style_user = "bright-red"
-
-[hostname]
-ssh_only = false
-style = "bright-red"
-
-[env_var]
-variable = "SHELL"
-style = "bright-yellow"
+[cmd_duration]
+disabled = true
 
 [directory]
 truncation_length = 5
-prefix = ""
-style = "bright-cyan"
+prefix = "in "
+style = "bold cyan"
+
+[env_var]
+variable = "SHELL"
+style = "bold yellow"
+default = "unknown shell"
+
+[git_branch]
+style = "bold cyan"
+
+[git_status]
+disabled = true
+
+[hostname]
+ssh_only = false
+style = "bold red"
+prefix = "["
+suffix = "]"
+
+[username]
+show_always = true
+style_user = "bold red"
