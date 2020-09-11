@@ -112,10 +112,24 @@ nnoremap <F9> gT
 nnoremap <F10> gt
 
 " Netrw settings
+" Refer to => https://shapeshed.com/vim-netrw/#invoking-netrw
+" Refer to => https://dev.to/aitorfernandez/starting-again-with-vim-23ep
 " Tree style listing
-let g:netrw_liststyle=3
+let g:netrw_liststyle = 3
 " No banner
-let g:netrw_banner=0
+let g:netrw_banner = 0
+" Open files in previous window
+let g:netrw_browse_split = 4
+" Set the width of the netrw explorer to 20% of the page
+let g:netrw_winsize = 20
+" Sort sequence, directories on the top, files below
+let g:netrw_sort_sequence = '[\/]$,*'
+" Keep the cursor in the netrw window
+let g:netrw_preview = 1
+" Open files in vertical tab
+let g:netrw_altv = 1
+" Invoke netrw in a split vertical window
+nnoremap <Leader><Space> :Vex<CR>
 
 " Source .vimrc if present in the working directpry
 set exrc
