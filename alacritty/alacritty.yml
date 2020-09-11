@@ -136,3 +136,21 @@ cursor:
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
   unfocused_hollow: true
+
+# Mouse bindings
+#
+# Available fields:
+#   - mouse
+#   - action
+#   - mods (optional)
+#
+# Values for `mouse`:
+#   - Middle
+#   - Left
+#   - Right
+#   - Numeric identifier such as `5`
+#
+# All available `mods` and `action` values are documented in the key binding
+# section.
+mouse_bindings:
+  - { mouse: Right, action: PasteSelection }
