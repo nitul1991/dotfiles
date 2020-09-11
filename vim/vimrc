@@ -1,5 +1,8 @@
 
 
+" Map Leader to ','
+let mapleader = ","
+
 " Enable line numbering
 set number
 " Enable relative line numbering
