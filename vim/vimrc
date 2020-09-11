@@ -152,3 +152,15 @@ autocmd FileType py       setlocal commentstring=#\ %s
 " Backspace behaviour
 " https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
 set backspace=start,indent
+
+" Code Movement
+" https://vim.fandom.com/wiki/Moving_lines_up_or_down
+nnoremap <Left> <<
+nnoremap <Right> >>
+nnoremap <Up> :m .-2<CR>==
+nnoremap <Down> :m .+1<CR>==
+
+vnoremap <Left> <gv
+vnoremap <Right> >gv
+vnoremap <Up> :m '<-2<CR>gv=gv
+vnoremap <Down> :m '>+1<CR>gv=gv
