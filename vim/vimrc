@@ -3,6 +3,9 @@
 " Map Leader to ','
 let mapleader = ","
 
+" Mapping to reload vimrc
+nnoremap <Leader>r :source $MYVIMRC<CR>
+
 " Enable line numbering
 set number
 " Enable relative line numbering
@@ -12,9 +15,9 @@ endif
 
 " Toggle line numbers
 if exists('+relativenumber')
-nnoremap <F2> :setlocal number! <bar> setlocal relativenumber!<CR>
+    nnoremap <F2> :setlocal number! <bar> setlocal relativenumber!<CR>
 else
-nnoremap <F2> :setlocal number!<CR>
+    nnoremap <F2> :setlocal number!<CR>
 endif
 
 " tab character = 4 spaces
@@ -41,18 +44,18 @@ syntax on
 " Remap the arrow keys
 nnoremap <up>    <nop>
 nnoremap <down>  <nop>
-nnoremap <right> <nop>
 nnoremap <left>  <nop>
+nnoremap <right> <nop>
 
-inoremap <up>    <nop>
 inoremap <up>    <nop>
 inoremap <down>  <nop>
+inoremap <left>  <nop>
 inoremap <right> <nop>
 
-vnoremap <left>  <nop>
+vnoremap <up>    <nop>
 vnoremap <down>  <nop>
-vnoremap <right> <nop>
 vnoremap <left>  <nop>
+vnoremap <right> <nop>
 
 set list
 set listchars=tab:>-,trail:.,nbsp:%,extends:>,precedes:<
