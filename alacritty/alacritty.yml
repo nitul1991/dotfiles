@@ -18,7 +18,7 @@ font:
     size: 18.0
 
 schemes:
-    monokai_pro: &dark
+    monokai_pro: &monokai_pro
         # Default colors
         primary:
           background: '#2D2A2E'
@@ -46,7 +46,7 @@ schemes:
           cyan:    '#78DCE8'
           white:   '#FCFCFA'
 
-    solarized_light: &light
+    solarized_light: &solarized_light
       # Default colors
       primary:
         background: '#fdf6e3' # base3
@@ -79,7 +79,35 @@ schemes:
         cyan:    '#93a1a1' # base1
         white:   '#fdf6e3' # base3
 
-colors: *dark
+    monokai_dark: &monokai_dark
+        # Default colors
+        primary:
+          background: '#272822'
+          foreground: '#F8F8F2'
+
+        # Normal colors
+        normal:
+         black:   '#272822'
+         red:     '#F92672'
+         green:   '#A6E22E'
+         yellow:  '#F4BF75'
+         blue:    '#66D9EF'
+         magenta: '#AE81FF'
+         cyan:    '#A1EFE4'
+         white:   '#F8F8F2'
+
+        # Bright colors
+        bright:
+         black:   '#75715E'
+         red:     '#F92672'
+         green:   '#A6E22E'
+         yellow:  '#F4BF75'
+         blue:    '#66D9EF'
+         magenta: '#AE81FF'
+         cyan:    '#A1EFE4'
+         white:   '#F9F8F5'
+
+colors: *monokai_dark
 
 window:
     # Window padding
