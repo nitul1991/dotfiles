@@ -140,7 +140,7 @@ set secure
 " nnoremap jk <ESC>
 
 " Toggle between buffers
-nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 set wildmenu
 
@@ -152,6 +152,12 @@ autocmd FileType py       setlocal commentstring=#\ %s
 " Backspace behaviour
 " https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
 set backspace=start,indent
+
+" Configure layout for Termedebug
+let g:termdebug_wide = 1
+
+" Inspect runtimepath
+command! InspectRuntimepath echo join(split(&runtimepath, ','), "\n")
 
 " Code Movement
 " https://vim.fandom.com/wiki/Moving_lines_up_or_down
