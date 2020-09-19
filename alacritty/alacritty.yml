@@ -1,8 +1,6 @@
 
 
 # https://github.com/tmcdonell/config-alacritty/blob/master/alacritty.yml
-# https://github.com/alacritty/alacritty/wiki/Color-schemes
-
 font:
     normal:
         # Font family
@@ -11,41 +9,16 @@ font:
         #   - macOS Menlo
         #   - Linux monospace
         #   - Windows Consolas
+        # The font 'Fira Code' has to be downloaded for this setting to work.
         family: 'Fira Code'
 
         style: Regular
 
     size: 18.0
 
+
+# https://www.freecodecamp.org/news/manage-multiple-github-accounts-the-ssh-way-2dadc30ccaca/
 schemes:
-    monokai_pro: &monokai_pro
-        # Default colors
-        primary:
-          background: '#2D2A2E'
-          foreground: '#FCFCFA'
-
-        # Normal colors
-        normal:
-          black:   '#403E41'
-          red:     '#FF6188'
-          green:   '#A9DC76'
-          yellow:  '#FFD866'
-          blue:    '#FC9867'
-          magenta: '#AB9DF2'
-          cyan:    '#78DCE8'
-          white:   '#FCFCFA'
-
-        # Bright colors
-        bright:
-          black:   '#727072'
-          red:     '#FF6188'
-          green:   '#A9DC76'
-          yellow:  '#FFD866'
-          blue:    '#FC9867'
-          magenta: '#AB9DF2'
-          cyan:    '#78DCE8'
-          white:   '#FCFCFA'
-
     solarized_light: &solarized_light
       # Default colors
       primary:
@@ -109,6 +82,7 @@ schemes:
 
 colors: *monokai_dark
 
+
 window:
     # Window padding
     #
@@ -136,6 +110,7 @@ cursor:
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
   unfocused_hollow: true
+
 
 # Mouse bindings
 #
