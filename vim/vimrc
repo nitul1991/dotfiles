@@ -159,6 +159,9 @@ let g:termdebug_wide = 1
 " Inspect runtimepath
 command! InspectRuntimepath echo join(split(&runtimepath, ','), "\n")
 
+" Enable mouse support for scrolling
+set mouse=a
+
 " Code Movement
 " https://vim.fandom.com/wiki/Moving_lines_up_or_down
 nnoremap <Left> <<
