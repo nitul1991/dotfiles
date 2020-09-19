@@ -40,7 +40,7 @@ schemes:
         magenta: '#d33682' # magenta
         cyan:    '#2aa198' # cyan
         white:   '#eee8d5' # base2
-    
+
       # Bright colors
       bright:
         black:   '#002b36' # base03
