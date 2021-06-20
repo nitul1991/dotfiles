@@ -24,12 +24,12 @@ schemes:
       primary:
         background: '#fdf6e3' # base3
         foreground: '#657b83' # base00
-    
+
       # Cursor colors
       cursor:
         text:   '#fdf6e3' # base3
         cursor: '#657b83' # base00
-    
+
       # Normal colors
       normal:
         black:   '#073642' # base02
