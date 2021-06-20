@@ -1,0 +1,18 @@
+[user]
+	name = Nitul Datt
+	email = nitul1991@gmail.com
+[core]
+	editor = vim
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+    st   = status
+	sts  = status --short --branch
+	df   = diff
+	dfs  = diff --staged
+	dft  = difftool
+	dfts = difftool --staged
