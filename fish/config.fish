@@ -1,9 +1,5 @@
 
 
-function ltr
-    ls -alhtr $argv
-end
-
 # Increase the number of characters per path part in the working directory
 # displayed as part of the prompt
 set fish_prompt_pwd_dir_length 10
