@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugins')
     " Language specific extensions
     Plug 'dag/vim-fish', { 'for': 'fish' }
     Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoUpdateBinaries' }
+    Plug 'cespare/vim-toml', { 'for': 'toml' }
 
     " LSP client
     Plug 'neoclide/coc.nvim', { 'branch': 'release' }
