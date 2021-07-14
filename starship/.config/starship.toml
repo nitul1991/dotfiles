@@ -5,26 +5,31 @@ disabled = true
 
 [directory]
 truncation_length = 5
-prefix = "in "
-style = "bold cyan"
-
-[env_var]
-variable = "SHELL"
-style = "bold yellow"
-default = "unknown shell"
+# blue
+style  = "fg:#40e0d0"
+format = "[$path]($style) "
 
 [git_branch]
-style = "bold cyan"
+# yellow
+style  = "fg:#ffd700"
+format = "[$symbol$branch]($style) "
 
 [git_status]
 disabled = true
 
 [hostname]
 ssh_only = false
-style = "bold red"
-prefix = "["
-suffix = "]"
+# red
+style    = "fg:#ff6347"
+format   = "[$hostname]($style) "
 
 [username]
 show_always = true
-style_user = "bold red"
+# red
+style_user  = "fg:#ff6347"
+format      = "[$user@]($style)"
+
+[golang]
+# blue
+style  = "fg:#40e0d0"
+format = "via [go $version]($style)"
