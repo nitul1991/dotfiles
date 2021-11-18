@@ -22,3 +22,5 @@
 	lg1 = log --pretty='format:%C(auto)%<|(11)%cs %C(cyan)%<|(23)%cn %C(auto)%h %s %d'
 	list-files = show --pretty='' --name-only
 	gr = log --oneline --decorate --graph --all
+[init]
+	defaultBranch = main
