@@ -3,6 +3,11 @@
 " Map Leader to ','
 let mapleader = ","
 
+" Map <ESC> to jk
+inoremap jk <ESC>
+"nnoremap jk <ESC>
+vnoremap jk <ESC>
+
 " Mapping to reload vimrc
 nnoremap <Leader>r :source $MYVIMRC<CR>
 
