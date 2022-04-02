@@ -26,5 +26,9 @@ call plug#begin('~/.vim/plugins')
     " > http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
     Plug 'godlygeek/tabular'
 
+
+    " Run vim compiler plugins asynchronously
+    Plug 'tpope/vim-dispatch'
+
 " Plugins become visible to Vim after this call.
 call plug#end()
